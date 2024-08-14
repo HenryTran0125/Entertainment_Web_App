@@ -1,0 +1,29 @@
+.section {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.alignment {
+  padding-left: 16.4rem;
+  padding-top: 6.4rem;
+}
+
+.inputContainer {
+  height: 3.2rem;
+  display: flex;
+}
+
+.img {
+  margin-right: 2.4rem;
+}
+
+.input {
+  height: 3rem;
+  line-height: 3;
+  width: 32.1rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #fff;
+}
