@@ -1,0 +1,51 @@
+.title {
+  font-size: 3.2rem;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+
+.ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.li {
+  margin-right: 4rem;
+}
+
+.img {
+  border-radius: 1rem;
+  position: relative;
+}
+
+.alignmentInformation {
+  position: absolute;
+}
+
+.itemCategory {
+  display: flex;
+  align-items: center;
+  margin-right: 1.8rem;
+}
+
+.icon {
+  margin-right: 0.6rem;
+}
+
+.informationList {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.itemList {
+  margin-right: 1.8rem;
+
+  &:first-child {
+    list-style-type: none;
+  }
+
+  &:last-child {
+    margin-right: none;
+  }
+}

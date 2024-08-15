@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import magnifyingGlass from "../../../public/assets/icon-search.svg";
+import Trending from "../../ui/Trending/Trending";
 
 export default function page() {
   return (
@@ -22,7 +23,9 @@ export default function page() {
           />
         </div>
 
-        <div></div>
+        <div className={styles.trending}>
+          <Trending />
+        </div>
 
         <div></div>
       </div>
