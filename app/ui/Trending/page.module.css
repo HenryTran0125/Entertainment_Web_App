@@ -2,6 +2,8 @@
   font-size: 3.2rem;
   text-transform: capitalize;
   font-weight: 300;
+  color: #fff;
+  margin-bottom: 2.5rem;
 }
 
 .ul {
@@ -11,6 +13,7 @@
 
 .li {
   margin-right: 4rem;
+  position: relative;
 }
 
 .img {
@@ -20,6 +23,9 @@
 
 .alignmentInformation {
   position: absolute;
+  bottom: 2.4rem;
+  left: 2.4rem;
+  color: #fff;
 }
 
 .itemCategory {
@@ -36,16 +42,32 @@
   display: flex;
   align-items: center;
   margin-bottom: 0.3rem;
+  font-size: 1.5rem;
 }
 
 .itemList {
-  margin-right: 1.8rem;
+  margin-right: 2.4rem;
+  color: rgba(255, 255, 255, 0.6);
 
   &:first-child {
     list-style-type: none;
   }
+}
 
-  &:last-child {
-    margin-right: none;
-  }
+.trendingTitle {
+  font-size: 2.4rem;
+  font-weight: 550;
+}
+
+.bookmarkEmptyContainer {
+  position: absolute;
+  top: 1.6rem;
+  right: 2.4rem;
+  background-color: rgba(8, 31, 92, 0.3);
+  border-radius: 50%;
+  height: 3.2rem;
+  width: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -4,6 +4,7 @@ import data from "../../../data.json";
 import Image from "next/image";
 import Movie from "../../../public/assets/icon-category-movie.svg";
 import tv from "../../../public/assets/icon-category-tv.svg";
+import bookmark from "../../../public/assets/icon-bookmark-empty.svg";
 
 export default function Trending() {
   const dataTrending = data.filter((item) => item.isTrending);
@@ -28,7 +29,7 @@ export default function Trending() {
                 <div className={styles.alignmentInformation}>
                   <ul className={styles.informationList}>
                     <li className={styles.itemList}>{item.year}</li>
-                    <li className={styles.itemCategory}>
+                    <li className={styles.itemList}>
                       <Image
                         src={item.category == "Movie" ? Movie : tv}
                         height={12}
@@ -42,7 +43,16 @@ export default function Trending() {
                     <li className={styles.itemList}>{item.rating}</li>
                   </ul>
 
-                  <div>{item.title}</div>
+                  <div className={styles.trendingTitle}>{item.title}</div>
+                </div>
+
+                <div className={styles.bookmarkEmptyContainer}>
+                  <Image
+                    src={bookmark}
+                    width={11.67}
+                    height={14}
+                    alt="book mark"
+                  />
                 </div>
               </li>
             ))}

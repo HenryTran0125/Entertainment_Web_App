@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import magnifyingGlass from "../../../public/assets/icon-search.svg";
 import Trending from "../../ui/Trending/Trending";
+import Recommend from "../../ui/Recommend/Recommend";
 
 export default function page() {
   return (
@@ -27,7 +28,9 @@ export default function page() {
           <Trending />
         </div>
 
-        <div></div>
+        <div>
+          <Recommend />
+        </div>
       </div>
     </section>
   );
