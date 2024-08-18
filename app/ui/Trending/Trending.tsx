@@ -5,10 +5,10 @@ import Image from "next/image";
 import Movie from "../../../public/assets/icon-category-movie.svg";
 import tv from "../../../public/assets/icon-category-tv.svg";
 import bookmark from "../../../public/assets/icon-bookmark-empty.svg";
+import Bookmark from "../Bookmark/Bookmark";
 
 export default function Trending() {
   const dataTrending = data.filter((item) => item.isTrending);
-  console.log(dataTrending);
   return (
     <section>
       <div>
@@ -46,14 +46,7 @@ export default function Trending() {
                   <div className={styles.trendingTitle}>{item.title}</div>
                 </div>
 
-                <div className={styles.bookmarkEmptyContainer}>
-                  <Image
-                    src={bookmark}
-                    width={11.67}
-                    height={14}
-                    alt="book mark"
-                  />
-                </div>
+                <Bookmark bookmarkStyle="trending" />
               </li>
             ))}
           </ul>

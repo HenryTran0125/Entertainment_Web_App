@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import SideNav from "./ui/sideNav/sidenav";
+import SideNav from "./ui/SideNav/SideNav";
 
 export default function Home() {
   return (
