@@ -5,7 +5,7 @@ import Image from "next/image";
 import Movie from "../../../public/assets/icon-category-movie.svg";
 import tv from "../../../public/assets/icon-category-tv.svg";
 import bookmark from "../../../public/assets/icon-bookmark-empty.svg";
-import Bookmark from "../Bookmark/Bookmark";
+import BookmarkEmpty from "../BookmarkEmpty/BookmarkEmpty";
 
 export default function Trending() {
   const dataTrending = data.filter((item) => item.isTrending);
@@ -46,7 +46,7 @@ export default function Trending() {
                   <div className={styles.trendingTitle}>{item.title}</div>
                 </div>
 
-                <Bookmark bookmarkStyle="trending" />
+                <BookmarkEmpty bookmarkStyle="trending" />
               </li>
             ))}
           </ul>

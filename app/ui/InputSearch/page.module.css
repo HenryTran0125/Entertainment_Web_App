@@ -1,0 +1,32 @@
+.inputContainer {
+  height: 3.2rem;
+  display: flex;
+  margin-bottom: 1.9rem;
+  padding-left: 16.4rem;
+  padding-top: 6.4rem;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.img {
+  margin-right: 2.4rem;
+}
+
+.input {
+  flex: 1;
+  height: 3rem;
+  line-height: 3;
+  width: 32.1rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.input:focus {
+  border-bottom: 1px solid grey;
+}

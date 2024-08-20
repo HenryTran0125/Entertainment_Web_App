@@ -8,7 +8,7 @@ interface BookmarkStyle {
   bookmarkStyle: string;
 }
 
-export default function Bookmark({ bookmarkStyle }: BookmarkStyle) {
+export default function BookmarkEmpty({ bookmarkStyle }: BookmarkStyle) {
   const trendingCheck = bookmarkStyle == "trending";
   const recommendCheck = bookmarkStyle == "recommend";
   console.log(trendingCheck, recommendCheck);
