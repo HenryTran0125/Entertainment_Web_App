@@ -1,20 +1,35 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Trending from "../../ui/Trending/Trending";
 import Recommend from "../../ui/Recommend/Recommend";
-import InputSearch from "../../ui/InputSearch/InputSearch";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
+import InputResult from "../../ui/InputResult/InputResult";
 
-export default function page() {
+export default function Home() {
+  const searchParams = useSearchParams();
+  const params = searchParams.get("search")?.toLowerCase();
+  console.log(params);
+
   return (
     <section className={styles.section}>
       <div className={styles.alignment}>
-        <div className={styles.trending}>
-          <Trending />
-        </div>
+        {params ? (
+          <div>
+            <InputResult params={params} />
+          </div>
+        ) : (
+          <div>
+            <div className={styles.trending}>
+              <Trending />
+            </div>
 
-        <div>
-          <Recommend />
-        </div>
+            <div>
+              <Recommend />
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

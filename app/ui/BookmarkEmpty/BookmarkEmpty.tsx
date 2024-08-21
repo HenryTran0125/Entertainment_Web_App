@@ -11,7 +11,7 @@ interface BookmarkStyle {
 export default function BookmarkEmpty({ bookmarkStyle }: BookmarkStyle) {
   const trendingCheck = bookmarkStyle == "trending";
   const recommendCheck = bookmarkStyle == "recommend";
-  console.log(trendingCheck, recommendCheck);
+  // console.log(trendingCheck, recommendCheck);
 
   return (
     <div
