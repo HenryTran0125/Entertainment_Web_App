@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import styles from "./page.module.css";
 import Trending from "../../ui/Trending/Trending";
 import Recommend from "../../ui/Recommend/Recommend";
-import { useParams, useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import InputResult from "../../ui/InputResult/InputResult";
+import data from "../../../data.json";
 
 export default function Home() {
   const searchParams = useSearchParams();
@@ -17,7 +18,7 @@ export default function Home() {
       <div className={styles.alignment}>
         {params ? (
           <div>
-            <InputResult params={params} />
+            <InputResult data={data} params={params} />
           </div>
         ) : (
           <div>

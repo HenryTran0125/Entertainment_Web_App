@@ -13,13 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div>
       <SideNav />
       <InputSearch />
-      {params ? (
-        <div>
-          <InputResult params={params} />
-        </div>
-      ) : (
-        <div>{children}</div>
-      )}{" "}
+      <div>{children}</div>
     </div>
   );
 }

@@ -24,7 +24,7 @@ export default function InputSearch() {
     }
 
     replace(`${pathname}?${params.toString()}`);
-  }, 800);
+  }, 500);
 
   return (
     <div className={styles.inputContainer}>
