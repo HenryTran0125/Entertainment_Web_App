@@ -25,6 +25,8 @@
   border: none;
   font-size: 2rem;
   color: #fff;
+  caret-color: red;
+  caret-shape: underscore;
 }
 
 .input:focus {

@@ -15,6 +15,20 @@
   }
 }
 
+.span {
+  cursor: pointer;
+}
+
+.div {
+  position: relative;
+  cursor: pointer;
+}
+
+.span:hover {
+  cursor: pointer;
+  filter: brightness(50%);
+}
+
 .img {
   border-radius: 1rem;
   margin-bottom: 0.8rem;

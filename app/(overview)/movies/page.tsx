@@ -13,7 +13,6 @@ export default function Page() {
   const keywords = params.get("search")?.toLowerCase();
 
   const categoryMovie = data.filter((element) => element.category === "Movie");
-  console.log(categoryMovie, 2);
   return (
     <>
       {keywords ? (

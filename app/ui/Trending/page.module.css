@@ -16,6 +16,16 @@
   position: relative;
 }
 
+.span {
+  transition: filter 0.8 ease;
+  cursor: pointer;
+}
+
+.span:hover {
+  cursor: pointer;
+  filter: brightness(50%);
+}
+
 .img {
   border-radius: 1rem;
   position: relative;

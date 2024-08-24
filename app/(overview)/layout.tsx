@@ -8,7 +8,6 @@ import InputResult from "../ui/InputResult/InputResult";
 export default function Layout({ children }: { children: React.ReactNode }) {
   const searchParams = useSearchParams();
   const params = searchParams.get("search")?.toLowerCase();
-  console.log(params);
   return (
     <div>
       <SideNav />

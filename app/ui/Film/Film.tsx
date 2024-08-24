@@ -1,28 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
-import BookmarkEmpty from "../BookmarkEmpty/BookmarkEmpty";
-import BookmarkFull from "../BookmarkFull/BookmarkFull";
 import Movie from "../../../public/assets/icon-category-movie.svg";
 import tv from "../../../public/assets/icon-category-tv.svg";
+import Play from "../Play/Play";
+import Bookmark from "../Bookmark/Bookmark";
 
 interface DataProps {
   dataFilm: any[];
 }
 
 export default function Film({ dataFilm }: DataProps) {
+  const [hover, setHover] = useState<number | null>(null);
+
+  function onHover(index: number) {
+    setHover((curr) => (curr == index ? null : index));
+  }
   return (
     <ul className={styles.ul}>
       {dataFilm.map((element, index) => (
-        <li className={styles.li} key={index}>
-          <div>
-            <Image
-              src={`/${element.thumbnail.regular.medium}`}
-              width={280}
-              height={174}
-              alt={element.title}
-              className={styles.img}
-            />
+        <li
+          onMouseEnter={() => onHover(index + 1)}
+          onMouseLeave={() => setHover(null)}
+          className={styles.li}
+          key={index}
+        >
+          <div className={styles.div}>
+            <div className={styles.span}>
+              <Image
+                src={`/${element.thumbnail.regular.medium}`}
+                width={280}
+                height={174}
+                alt={element.title}
+                className={styles.img}
+              />
+            </div>
+            {hover == index + 1 ? (
+              <div className={styles.span}>
+                <Play />
+              </div>
+            ) : (
+              ""
+            )}
           </div>
 
           <div className={styles.information}>
@@ -50,11 +69,12 @@ export default function Film({ dataFilm }: DataProps) {
             <div className={styles.title}>{element.title}</div>
           </div>
 
-          {element.isBookmarked ? (
-            <BookmarkFull />
-          ) : (
-            <BookmarkEmpty bookmarkStyle="recommend" />
-          )}
+          {
+            <Bookmark
+              isBookmark={element.isBookmarked}
+              bookmarkStyle="recommend"
+            />
+          }
         </li>
       ))}
     </ul>
